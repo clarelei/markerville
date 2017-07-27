@@ -32,6 +32,6 @@ async function onSearchData(event) {
 }
 }
 
-var table = $('#result table tbody').DataTable();
+var table = $('#result table').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
