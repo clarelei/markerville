@@ -13,7 +13,7 @@ async function onSearchData(event) {
 
   for (let obj in associated){
     count++;
-    let rowToAdd = [];
+    var rowToAdd = ["","","","","",""];
     rowToAdd[0] = associated[obj].markerName;
 
     rowToAdd[1] = associated[obj].biomarkerType;
@@ -32,6 +32,6 @@ async function onSearchData(event) {
 }
 }
 
-var table = $('#result table').DataTable();
+var table = $('#result table tbody').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
