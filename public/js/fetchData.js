@@ -14,13 +14,6 @@ async function onSearchData(event) {
   for (let obj in associated){
     count++;
     let row = document.createElement('tr');
-    if(count%2 == 0) {
-    row.classList.add('even');
-    } else {
-    row.classList.add('odd');
-    }
-    
-
     let name = document.createElement('td');
     name.innerHTML = associated[obj].markerName;
     row.appendChild(name);
