@@ -13,29 +13,19 @@ async function onSearchData(event) {
 
   for (let obj in associated){
     count++;
-    let row = document.createElement('tr');
-    let name = document.createElement('td');
-    name.innerHTML = associated[obj].markerName;
-    row.appendChild(name);
+    let rowToAdd = [];
+    rowToAdd[0] = associated[obj].markerName;
 
-    let bioType = document.createElement('td');
-    bioType.innerHTML = associated[obj].biomarkerType;
-    row.appendChild(bioType);
+    rowToAdd[1] = associated[obj].biomarkerType;
 
     
-    let disease = document.createElement('td');
-    disease.innerHTML = associated[obj].diseaseType;
-    row.appendChild(disease);
+    rowToAdd[2] = associated[obj].diseaseType;
 
-    let drug = document.createElement('td');
-    drug.innerHTML = associated[obj].associatedDrug;
-    row.appendChild(drug);
+    rowToAdd[3] = associated[obj].associatedDrug;
 
-    let mediumType = document.createElement('td');
-    mediumType.innerHTML = associated[obj].medium;
-    row.appendChild(mediumType);
+    rowToAdd[4] = associated[obj].medium;
 
-    table.row.add(row);
+    table.row.add(rowToAdd).draw();
     }
     console.log(count);
 
