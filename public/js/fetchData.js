@@ -13,7 +13,7 @@ async function onSearchData(event) {
 
   for (let obj in associated){
     count++;
-    var rowToAdd = ["","","","","",""];
+    var rowToAdd = ["","","","",""];
     rowToAdd[0] = associated[obj].markerName;
 
     rowToAdd[1] = associated[obj].biomarkerType;
