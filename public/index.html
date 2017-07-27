@@ -72,11 +72,11 @@
                <table id="example" class ="display">  
                <thead>
                <tr> 
-                <th> A
-                <th> B
-                <th> C 
-                <th> D
-                <th> E
+                <th> Biomarker Name
+                <th> Biomarker Type
+                <th> Disease 
+                <th> Associated Drug
+                <th> Medium
                  </tr>
                </thead>
                <tbody>
@@ -88,17 +88,12 @@
           <script src="js/jquery.dataTables.min.js"></script>
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                 <script type="text/javascript">
-                  $(document).ready(function() {
-                      $('#example').DataTable( {
-                          "processing": true,
-                          "serverSide": true,
-                          "ajax": "js/server_processing.php"
-                      } );
-                  } );
-                </script>
-                <script type="text/javascript">
                 $(document).ready(function(){
-                  $('#result table').DataTable();
+                  $('#result table').DataTable( {
+                    "processing": true,
+                     "serverSide": true,
+                     "ajax": "js/server_processing.php"
+                  });
                 });
               </script>
 
