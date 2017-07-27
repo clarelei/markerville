@@ -19,7 +19,11 @@
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    </head>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+  
+  </head>
 
       <body>
           <div class = "navBar">
@@ -68,9 +72,10 @@
           <div id = "result" class="inactive">
               <div id = "result-table-cont">
 
-               <table class ="display">  
+               <table id="example" class ="display">  
                <thead>
-               <tr> A
+               <tr> 
+                 <th> A
                 <th> B
                 <th> C 
                 <th> D
@@ -86,6 +91,15 @@
           <script src="js/jquery.dataTables.min.js"></script>
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                <script type="text/javascript">
+                 $(document).ready(function() {
+                    $('#example').DataTable( {
+                        "processing": true,
+                        "serverSide": true,
+                        "ajax": "js/server_processing.php"
+                    } );
+                } );
+                </script>
+                <script type="text/javascript">
                 $(document).ready(function(){
                   $('#result table').DataTable();
                 });
