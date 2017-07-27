@@ -35,12 +35,13 @@ async function onSearchData(event) {
     mediumType.innerHTML = associated[obj].medium;
     row.appendChild(mediumType);
 
-    table.appendChild(row);
+    table.add(row);
     }
     console.log(count);
 
 }
 }
-const table = document.querySelector('#result table tbody');
+
+var table = $('#result table').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
