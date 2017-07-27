@@ -35,7 +35,7 @@ async function onSearchData(event) {
     mediumType.innerHTML = associated[obj].medium;
     row.appendChild(mediumType);
 
-    table.add(row);
+    table.row.add(row);
     }
     console.log(count);
 
