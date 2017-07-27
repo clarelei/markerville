@@ -14,6 +14,7 @@ async function onSearchData(event) {
   for (let obj in associated){
     count++;
     let row = document.createElement('tr');
+    row.classList.add('row');
 
     let name = document.createElement('td');
     name.innerHTML = associated[obj].markerName;
