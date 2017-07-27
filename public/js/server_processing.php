@@ -42,7 +42,7 @@ $input =& $_GET;
  */
  
 // Number of columns being displayed (useful for getting individual column search info)
-$iColumns = $input[5];
+$iColumns = $input['iColumns'];
  
 // Get mDataProp values assigned for each table column
 $dataProps = array();
