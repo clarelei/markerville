@@ -41,7 +41,7 @@
 
 
 
-  #database, #aboutPage, #forum{
+  #database, #aboutPage, #forum, #result{
 
     padding-top: 50px;
     min-height: 100vh;
@@ -51,6 +51,21 @@
     align-items: center;
 
   }
+
+#result thead tr
+{
+  width:100%;
+}
+
+#result thead th
+{
+  width:20%;
+}
+
+#result tbody
+{
+display:table-row-group;
+}
 
 
 
@@ -70,27 +85,25 @@
    }
 
 
-#DataTables_Table_0_wrapper{
-      margin: auto;
-
-  width:95%;
-    justify-content: center;
+#result-table-cont {
+   align-items: center;
     text-align: center;
-}
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: black;
+      width: 100vw;
 
+}
   #forum-table-cont{
     align-items: center;
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color:blue;
+    color: white;
     width: 100vw;
 
   }
 
 
 #result table{
-   justify-content: center;
-    text-align: center;
   width: 100%;
 }
 
