@@ -26,10 +26,6 @@ async function onSearchData(event) {
     rowToAdd[4] = associated[obj].medium;
 
     table.row.add(rowToAdd).draw();
-    for (x = 0; x < rowToAdd.length; x++) {
-      rowToAdd[x].className += "lazy";
-      rowToAdd[x].attributes['data-original'] = 'mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg';
-    }
   }
     console.log(count);
 
