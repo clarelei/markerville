@@ -95,7 +95,33 @@
                <script type="text/javascript">
                 $(document).ready(function(){
                   $('#result table').DataTable();
-                });
+                  $('#result table').dataTable({
+                    "processing": true,
+                    "serverSide": true,
+                    "ajax": "api/parent/child",
+                    "aoData": { sessionId: sessionId },
+                    "fnServerData": function (sSource, aoData, fnCallback) {
+                      $.ajax({
+                        type: 'POST', // or 'GET'
+                        url: sSource,
+                        data: aoData,
+                        success: function(data, status){
+                          if(status == 'success'){
+                          //conversion from xml to javascript array
+                          // and the final object will lool like
+                          //var newData = {
+                          //  "draw": 9,
+                          //  "recordsTotal": 57,
+                          //  "recordsFiltered": 57,
+                          //  "data": adddata //created from xml
+                          //}
+                            fnCallback(newData);
+                            $("#result table").show();
+                              }
+                          }
+                      });
+                  }
+              }); 
               </script>
 
            </div>
