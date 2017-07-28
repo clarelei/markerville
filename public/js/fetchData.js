@@ -26,7 +26,11 @@ async function onSearchData(event) {
     rowToAdd[4] = associated[obj].medium;
 
     table.row.add(rowToAdd).draw();
+    for (x = 0; x < rowToAdd.length; x++) {
+      rowToAdd[x].className += "lazy";
+      rowToAdd[x].createAttribute('data-original', '');
     }
+  }
     console.log(count);
 
 }
