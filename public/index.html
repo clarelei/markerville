@@ -19,7 +19,9 @@
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    </head>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+  </head>
 
       <body>
           <div class = "navBar">
@@ -95,32 +97,12 @@
                <script type="text/javascript">
                 $(document).ready(function(){
                   $('#result table').DataTable();
-                  $('#result table').dataTable({
+                  $('#result table').DataTable( {
                     "processing": true,
                     "serverSide": true,
-                    "ajax": "api/parent/child",
-                    "aoData": { sessionId: sessionId },
-                    "fnServerData": function (sSource, aoData, fnCallback) {
-                      $.ajax({
-                        type: 'POST', // or 'GET'
-                        url: sSource,
-                        data: aoData,
-                        success: function(data, status){
-                          if(status == 'success'){
-                          //conversion from xml to javascript array
-                          // and the final object will lool like
-                          //var newData = {
-                          //  "draw": 9,
-                          //  "recordsTotal": 57,
-                          //  "recordsFiltered": 57,
-                          //  "data": adddata //created from xml
-                          //}
-                            fnCallback(newData);
-                            $("#result table").show();
-                              }
-                          }
-                      });
-                  }
+                    "ajax": "js/server_processing.php",
+                    "deferLoading": 135
+                  } );                  
               }); 
               </script>
 
