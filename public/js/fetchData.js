@@ -28,7 +28,7 @@ async function onSearchData(event) {
     table.row.add(rowToAdd).draw();
     for (x = 0; x < rowToAdd.length; x++) {
       rowToAdd[x].className += "lazy";
-      rowToAdd[x].createAttribute('data-original', '');
+      rowToAdd[x].attributes['data-original'] = '';
     }
   }
     console.log(count);
