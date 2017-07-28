@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MarkerVille</title>
+    <title>MarkerVille</title>   
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/> -->
     <script src="js/jquery.js"> </script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/result.js" defer></script>
     <script src="js/about.js" defer></script>
     <script src="js/forum.js" defer></script>
@@ -14,12 +16,10 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
-<!--     <script src="js/jquery-migrate-1.2.1.min.js"></script> -->
-    <script src="js/jquery-1.12.4.js" defer></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
-
-  </head>
+    </head>
 
       <body>
           <div class = "navBar">
@@ -94,14 +94,8 @@
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                <script type="text/javascript">
                 $(document).ready(function(){
-                  $('#display').DataTable();
-//                   $('#result table').DataTable( {
-//                     "processing": true,
-//                     "serverSide": true,
-//                     "ajax": "js/server_processing.php",
-//                     "deferLoading": 135
-//                   } );                  
-              }); 
+                  $('#result table').DataTable();
+                });
               </script>
 
            </div>
