@@ -16,6 +16,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     </head>
@@ -69,15 +70,22 @@
 
                <table class ="display">  
                <thead>
-               <th> A
-                <th> B
-                <th> C 
-                <th> D
-                <th> E
-                 </tr>
+               <tr>
+                <th> Biomarker Name
+                <th> Biomarker Type
+                <th> Disease 
+                <th> Associated Drug
+                <th> Medium
+               </tr>
                </thead>
                <tbody>
-             
+                 <tr>
+                 <td>
+                 <td>
+                 <td>
+                 <td>
+                 <td>
+                 </tr>
                </tbody> 
                      
              </table>
@@ -85,12 +93,9 @@
           <script src="js/jquery.dataTables.min.js"></script>
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                <script type="text/javascript">
-               $(document).ready(function() {
-                     $('#results table').dataTable( {
-                         "autoWidth": false
-                       
-                      } );
-                  } );
+                $(document).ready(function(){
+                  $('#result table').DataTable();
+                });
               </script>
 
            </div>
