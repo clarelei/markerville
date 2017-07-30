@@ -48,5 +48,5 @@ $connection = new MongoClient('mongodb://test:test@ds121543.mlab.com:21543/herok
 require( 'ssp.class.php' );
  
 echo json_encode(
-    SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
+    SSP::simple( $_GET, $connection, $table, $primaryKey, $columns )
 );
