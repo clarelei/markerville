@@ -305,7 +305,7 @@ display:table-row-group;
 
       .response{
           position: relative;
-          background: #7B2623;
+          background: darkblue;
           color: #7A2723;
           padding: 10px 20px;
           -webkit-transform: translate3d(0,-40px, 0) rotate(-.5deg);
