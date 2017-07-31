@@ -94,19 +94,9 @@
           <script src="js/jquery.dataTables.min.js"></script>
           <script src="js/dataTables.jqueryui.min.js"></script> -->
                <script type="text/javascript">
-//                 $(document).ready(function(){
-//                   $('#result table').DataTable();
-//                 });
-                 $(document).ready(function() {
-                      $('#result table').DataTable( {
-                          "processing": true,
-                          "serverSide": true,
-                          "ajax": {
-                            url: 'mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg',
-                            type: 'POST'
-                          }
-                      } );
-                  } );
+                $(document).ready(function(){
+                  $('#result table').DataTable();
+                });
               </script>
 
            </div>
@@ -120,6 +110,7 @@
 
               <form id="searchForm">
                 <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+                <br><br><button class="browseButton">Browse Database</button>
               </form>
               </div>
               <div class = "logo-cont">
