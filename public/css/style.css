@@ -35,6 +35,26 @@
     animation-duration: 1s;
 }
 
+    .browseButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    overflow: auto;
+    cursor: pointer;
+    width:25%;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 125%;
+    border-radius: 12px;
+    border-color: gray;
+    font-weight: lighter;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+
+  .browseButton:hover{
+    background-color: #e7e7e7;
+  }
+
     body {
       margin: 0;
     }
