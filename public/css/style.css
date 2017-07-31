@@ -75,7 +75,7 @@
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
 
-  #database, #aboutPage, #forum, #result{
+  #database, #aboutPage, #forum, #result, #resourcesPage{
 
     padding-top: 50px;
     min-height: 100vh;
@@ -203,7 +203,7 @@ display:table-row-group;
     opacity: 0.8;
   }
 
-      #resourcesPage p{
+    #resourcesPage p{
       
       /*word-wrap: break-word;*/
       line-height: 30px;
@@ -275,7 +275,7 @@ display:table-row-group;
         opacity: 0.7;
       }
 
-          #resourcesPage #snorkel{
+      #resourcesPage #snorkel{
         height: 185px;
         width: 85px;
         opacity: 1.0;
@@ -300,12 +300,6 @@ display:table-row-group;
       }
 
       #aboutPic{
-        padding-top: 30px;
-        text-align: center;
-      }
-
-    
-      #resourcesPic{
         padding-top: 30px;
         text-align: center;
       }
