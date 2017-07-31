@@ -26,7 +26,7 @@ async function onSearchData(event) {
     rowToAdd[4] = associated[obj].medium;
 
     table.row.add(rowToAdd).draw();
-  }
+    }
     console.log(count);
 
 }

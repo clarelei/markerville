@@ -1,8 +1,8 @@
 class Forum {
 
   constructor(containerElement){
-    this.prevTable = document.querySelector("#forum table");
-    this.prevTableRows = this.prevTable.getElementsByTagName('tr');
+    // this.prevTable = document.querySelector("#forum table");
+    // this.prevTableRows = this.prevTable.getElementsByTagName('tr');
     this.containerElement = containerElement;
   }
 
@@ -14,5 +14,5 @@ class Forum {
     this.containerElement.classList.add('inactive');
 
 
-}
+  }
 }
