@@ -304,6 +304,11 @@ display:table-row-group;
         text-align: center;
       }
 
+      #resourcesPic{
+        padding-top: 30px;
+        text-align: center;
+      }
+      
       /* unvisited link */
       a:link {
       color: white;

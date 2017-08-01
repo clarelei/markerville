@@ -5,6 +5,7 @@ async function onSearchData(event) {
   const word = input.value.trim().ignoreCase;
   const results = document.querySelector('#database');
   const result = await fetch('/lookup/' + word);
+  // const result = results.search(new RegExp(word, "i"));
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
