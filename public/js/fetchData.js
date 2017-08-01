@@ -32,16 +32,6 @@ async function onSearchData(event) {
     console.log(count);
 
 }
-    $(document).ready(function() {
-      $("#word-input").on("keyup", function() {
-        $('#database').hide();
-        var searchTerm = $(this).val().toLowerCase();
-        $('#database').filter(function(){
-        return  $(this).find("#word-input").text().toLowerCase().indexOf(searchTerm) > -1;
-        }).show();
-     });
-   });
-
 } 
 var table = $('#testid').DataTable();
 const searchForm = document.querySelector('#searchForm');
