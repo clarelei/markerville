@@ -29,7 +29,7 @@ async function onLookupWord(req, res) {
    console.log(routeParams);
 
       
-   const word = routeParams.word;
+   const word = routeParams.word.ignoreCase;
 
    
    const query =   { $or: [{markerName: word}, {biomarkerType: word}, {diseaseType: word}, {associatedDrug: word}, {medium: word}] };
