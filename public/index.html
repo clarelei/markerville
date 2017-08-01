@@ -10,6 +10,7 @@
     <script src="js/result.js" defer></script>
     <script src="js/about.js" defer></script>
     <script src="js/forum.js" defer></script>
+    <script src="js/resources.js" defer></script>
     <script src="js/database.js" defer></script>
     <script src="js/app.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -22,8 +23,8 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.jqueryui.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-       <script type="text/javascript" charset="utf8" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
-      <script type="text/javascript" charset="utf8" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.colVis.min.js"></script>
@@ -32,6 +33,7 @@
       <body>
           <div class = "navBar">
               <div class = "button" id = "databaseButton" > Biomarker Search  </div>
+              <div class = "button" id = "resourcesButton"> Resources </div>
               <div class = "button" id = "forumButton">  Forum </div>
               <div class = "button" id = "aboutButton"> About  </div>
           </div>
@@ -40,12 +42,29 @@
 
 
           <div id = "forum-table-cont">
+            <section>
+            <input class="animate" type="radio" name="question" id="q1"/>
+            <label class="animate" for="q1">Q: What is Snorkel?</label>
+            <p class="response animate">A: blah blah blah</p>
+
+            <input class="animate" type="radio" name="question" id="q2"/>
+            <label class="animate" for="q2">Q: What is Core NLP?</label>
+            <p class="response animate">A: bajgl;fbkdl;fa</p>
+
+            <input class="animate" type="radio" name="question" id="q3"/>
+            <label class="animate" for="q3">Q: asdhfjksgjd;?</label>
+            <p class="response animate">A: sdfjhkas;dgh</p>
+
+            <input class="animate" type="radio" name="question" id="q4"/>
+            <label class="animate" for="q4">Q: Where can i get some?</label>
+            <p class="response animate">A: ajkgl;c,mvwio</p>
+          </section>
             <div id = "message-post-cont">
               <!-- onsubmit="return false" -->
             <form id="forumForm">
             <input type = "text" id = "message-post"  placeholder="Question here"onblur="this.placeholder='Question here'" onfocus="this.placeholder = ''"> </input>
-          </form>
-        
+            <br><br><button type="button" class="faqButton" onclick="alert('Your question was submitted!')">Submit!</button>
+            </form>
             </div>
         </div>
 
@@ -71,17 +90,16 @@
 
                <table id ="testid" class="display" cellspacing="0" width="100%">  
                <thead>
-               <th> A
-                <th> B
-                <th> C 
-                <th> D
-                <th> E
+                 <tr>
+                   <th> Biomarker Name
+                   <th> Biomarker Type
+                   <th> Disease 
+                   <th> Associated Drug
+                   <th> Medium
                  </tr>
                </thead>
                <tbody>
-             
                </tbody> 
-                     
              </table>
       
              <script type="text/javascript">
@@ -118,6 +136,21 @@
               <div class = "logo-cont">
                 <img class="logo" src = "images/logo.png"> </img>
               </div>
+        </div>
+
+        <div id =  "resourcesPage" class="inactive">
+
+            <p>Markerville is a web-hosted database that displays information about biomarkers.<br>We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab.<br>Developed by <a href="http://mallicklab.stanford.edu/">Mallick Lab</a> at the Canary Center for Cancer Early Detection, Stanford University School of Medicine.<br>Built with Node.js, Express, and MySQL.</p>
+
+            <div id = "resourcesPic">
+            <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
+            <a href="https://canarycenter.stanford.edu/"><img id = "canary" src = "images/canary.png"></img></a>
+            <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
+            </div>
+
+              <div class = "logo-cont">
+            <img class = "logo" src = "images/logo.png"> </img>
+          </div>
         </div>
 
   </body>
