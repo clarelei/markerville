@@ -131,6 +131,19 @@
 
               <form id="searchForm">
                 <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+              <script>
+                $(document).ready(function() {
+                    $("#word-input").on("keyup", function() {
+                        $('#database').hide();
+                        var searchTerm = $(this).val().toLowerCase();
+                         $('#database').filter(function(){
+                              return  $(this).find("#word-input").text().toLowerCase().indexOf(searchTerm) > -1;
+                        }).show();
+                    });
+                });
+              </script>
+                
+                
                 <br><br><button class="browseButton">Browse Database</button>
                 </form>
               </div>
