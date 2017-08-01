@@ -1,7 +1,8 @@
 class Database {
   constructor(containerElement){
     this.containerElement = containerElement;
-    var table = $('#result table').DataTable();
+    var table = $('#testid').DataTable();
+
     this.message = document.querySelector('#result p');
     this.clearDatabase = this.clearDatabase.bind(this);
   }

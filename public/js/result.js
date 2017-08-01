@@ -1,8 +1,8 @@
 class Result {
 
   constructor(containerElement){
-    var table = $('#result table').DataTable();
     this.message = document.querySelector('#result p');
+    var table = $('#testid').DataTable();
     this.containerElement = containerElement;
   }
 

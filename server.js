@@ -3,12 +3,11 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-
+//const $ = require('jQuery');
 const app = express();
 app.use(express.static('public'));
-
-
-const MONGO_URL = `mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg`;
+ 
+const MONGO_URL = `mongodb://bsugarman:Loftusroad1@ds125053.mlab.com:25053/heroku_bj82h9ds`;
 
 let db = null;
 let collection = null;
@@ -16,7 +15,7 @@ let collectionForum = null;
 
 async function startServer(){
 db = await MongoClient.connect(process.env.MONGODB_URI || MONGO_URL);
-collection = db.collection('testdb');
+collection = db.collection('markers');
 collectionForum = db.collection('forum');
 
 
@@ -25,17 +24,23 @@ collectionForum = db.collection('forum');
 startServer();
 
 
-
 async function onLookupWord(req, res) {
    const routeParams = req.params;
+   console.log(routeParams);
+
+      
    const word = routeParams.word;
 
+   
    const query =   { $or: [{markerName: word}, {biomarkerType: word}, {diseaseType: word}, {associatedDrug: word}, {medium: word}] };
 
    const results = await collection.find(query, function(err, cursor) {
-     return cursor.toArray();
+     return cursor.batchSize(10).toArray();
    });
+ 
+           console.log(results);
 
+ 
    const formattedResults = results.map(function(result) {
      return {
        markerName: result.markerName,
@@ -62,7 +67,9 @@ async function onLookupWord(req, res) {
 
 
      const results = await collectionForum.find(function(err, cursor) {
+      console.log(cursor.toArray());
        return cursor.toArray();
+      
      });
 
      console.log(results);
@@ -86,7 +93,6 @@ async function onLookupWord(req, res) {
     app.get('/getForum/', getForum);
 
     app.post('/onPost', jsonParser, function (req, res) {
-      console.log("hey");
         const body = req.body;
         const message = body.message;
         collectionForum.insertOne({"question": message, "answer": "unanswered"});

@@ -11,6 +11,9 @@
     display: none !important;
   }
 
+#testid_filter{
+  display: inline block;
+}
 
 
   .navBar .button {
@@ -39,43 +42,9 @@
       margin: 0;
     }
 
-  .browseButton {
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
-    overflow: auto;
-    cursor: pointer;
-    width:25%;
-    word-wrap: break-word;
-    text-align: center;
-    font-size: 125%;
-    border-radius: 12px;
-    border-color: gray;
-    font-weight: lighter;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  }
 
-  .browseButton:hover{
-    background-color: #e7e7e7;
-  }
 
-   .faqButton {
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
-    overflow: auto;
-    cursor: pointer;
-    width:10%;
-    word-wrap: break-word;
-    text-align: center;
-    font-size: 100%;
-    border-radius: 12px;
-    border-color: gray;
-    font-weight: lighter;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  }
-
-  #database, #aboutPage, #forum, #result, #resourcesPage{
+  #database, #aboutPage, #forum{
 
     padding-top: 50px;
     min-height: 100vh;
@@ -85,21 +54,6 @@
     align-items: center;
 
   }
-
-#result thead tr
-{
-  width:100%;
-}
-
-#result thead th
-{
-  width:20%;
-}
-
-#result tbody
-{
-display:table-row-group;
-}
 
 
 
@@ -119,41 +73,31 @@ display:table-row-group;
    }
 
 
-#result-table-cont {
-   align-items: center;
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: black;
-      width: 100vw;
+#DataTables_Table_0_wrapper{
+      margin: auto;
 
+  width:100%;
+    justify-content: center;
+    text-align: center;
 }
+
   #forum-table-cont{
     align-items: center;
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: white;
+    color:blue;
     width: 100vw;
 
   }
 
 
-#result table{
-  width: 100%;
+#fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-tl.ui-corner-tr{
+   justify-content: center;
+    text-align: center;
+    width: 100%;
+    border-radius:0px;
 }
 
-
-#forum th {
-  width: 50vw;
-
-  border-bottom: 1px solid white;
-  color: white;
-}
-
-
-  #forum td {
-    width: 50vw;
-    color: white;
-  }
 
 
 #message-post-cont{
@@ -166,19 +110,26 @@ display:table-row-group;
   text-align: center;
   color: gray;
   height: 70px;
-  /*margin-top: 40vh;*/
+  margin-top: 40vh;
   opacity: 0.3;
-  width: 80%;
+  width: 100vw;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 27px;
 }
 
-/*#forumForm{
+#forumForm{
   position: fixed;
 
-}*/
+}
+
+.dt-buttons.ui-buttonset{
+      width:60%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
 
 
+}
 
 #message-post:focus {
   opacity: 0.8;
@@ -203,20 +154,7 @@ display:table-row-group;
     opacity: 0.8;
   }
 
-    #resourcesPage p{
-      
-      /*word-wrap: break-word;*/
-      line-height: 30px;
-      /*position: absolute;*/
-      text-align: center;
-      color: white;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-      font-size: 1.6em;
-      margin: 0;
-      padding:30px;
-      padding-bottom: 10px;
 
-    }
 
     #aboutPage p{
 
@@ -275,129 +213,7 @@ display:table-row-group;
         opacity: 0.7;
       }
 
-      #resourcesPage #snorkel{
-        height: 185px;
-        width: 85px;
-        opacity: 1.0;
-        padding:30px;
-        padding-top: 0px;
-      }
-
-      #resourcesPage #canary{
-        height: 150px;
-        width: 200px;
-        opacity: 1.0;
-        padding: 30px;
-        padding-top: 0px
-      }
-
-      #resourcesPage #nodejs{
-        height: 150px;
-        width: 200px;
-        opacity: 1.0;
-        padding: 30px;
-        padding-top: 0px
-      }
-
       #aboutPic{
         padding-top: 30px;
         text-align: center;
-      }
-
-      #resourcesPic{
-        padding-top: 30px;
-        text-align: center;
-      }
-      
-      /* unvisited link */
-      a:link {
-      color: white;
-      text-decoration: bold;
-      }
-
-      /* visited link */
-      a:visited {
-      color: grey;
-      text-decoration: none;
-      }
-
-      /* mouse over link */
-      a:hover {
-      color: blue;
-      text-decoration: underline;
-      text-decoration: bold;
-      }
-
-      /* selected link */
-      a:active {
-      color: blue;
-      text-decoration: underline;
-      }
-
-/*      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-      {
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
-          font-family: 'Montserrat', sans-serif;
-          line-height: 1.5em
-      }*/
-
-      body{
-        background: white;
-        box-sizing: border-box;
-      }
-      section{
-        padding: 0% 20%;
-      }
-      .animate{
-        transition: all .3s;
-      }
-
-      input[name=question]{
-          display: none;
-      }
-      input[name=question] + label{
-          position: relative;
-          display: block;
-          padding: 20px 20px;
-          font-size: 1.2em;
-          cursor: pointer;
-          background: rgba(246, 246, 246, 1);
-          color: #5a9aa8;
-          z-index: 2;
-          box-shadow: 0 0 10px rgba(0,0,0,.1);
-          border-radius: 3px;
-      }
-
-      .response{
-          position: relative;
-          background: darkblue;
-          color: #7A2723;
-          padding: 10px 20px;
-          -webkit-transform: translate3d(0,-40px, 0) rotate(-.5deg);
-          z-index: 1;
-          box-shadow: 0 0 10px rgba(0,0,0,.1);
-          opacity: 0;
-          border-radius: 3px;
-      }
-
-      input[name=question]:checked + label{
-          background: #F6F6F6;
-          color: #5a9aa8;
-      }
-      input[name=question]:checked + label + .response{
-          opacity: 1;
-          visibility: visible;
-          padding: 10px 20px;
-          -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
-          -webkit-filter: blur(0px);
-          margin-bottom: 20px;
-          color: white;
-      }
-
-      .fixed-height{
-          height: 50px;
-          overflow: hidden;
-          opacity: 1 !important;
       }
