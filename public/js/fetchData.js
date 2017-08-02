@@ -4,9 +4,13 @@ async function onSearchData(event) {
   event.preventDefault();
   
   const input = document.querySelector('#word-input');
-  const word = input.value;
+  const word = input.value.trim();
+  const search = new Array();
   const results = document.querySelector('#database');
-  const result = await fetch('/lookup/' + word);
+  if (results.search(word) != -1) {
+   search.push(results)
+  }
+  const result = await fetch('/lookup/' + search);
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
