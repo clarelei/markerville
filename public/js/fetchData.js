@@ -8,7 +8,7 @@ async function onSearchData(event) {
   const search = new Array();
   const results = document.querySelector('#database');
   if (results.indexOf(word) != -1) {
-   search.push(results)
+   search.push(results + "")
   }
   const result = await fetch('/lookup/' + search);
   const json = await result.json();
