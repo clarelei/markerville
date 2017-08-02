@@ -7,7 +7,7 @@ async function onSearchData(event) {
   const word = input.value.trim();
   const search = new Array();
   const results = document.querySelector('#database');
-  if (results.search(word) != -1) {
+  if (results.includes(word)) {
    search.push(results)
   }
   const result = await fetch('/lookup/' + search);
