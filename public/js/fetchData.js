@@ -46,7 +46,7 @@ async function onSearchData(event) {
   
   const input = document.querySelector('#word-input');
   const word = new RegExp(input.value.trim(), 'i');
-  const results = document.querySelector('#database');
+  let results = document.querySelector('#database');
   var result = ""; 
   for (word in results) {
    result += await fetch('/lookup/' + word);
