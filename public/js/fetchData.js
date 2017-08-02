@@ -6,12 +6,12 @@ async function onSearchData(event) {
   const input = document.querySelector('#word-input');
   const word = input.value.trim();
   const re = new RegExp(word, "gi");
-  const search = new Array();
+  const arr = new Array();
   const results = document.querySelector('#database');
-  if (results.match(re)) {
-   search.push(results + "")
+  if (results.include(re)) {
+   arr = re.exec(results);
   }
-  const result = await fetch('/lookup/' + search);
+  const result = await fetch('/lookup/' + arr);
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
