@@ -35,7 +35,7 @@ async function onLookupWord(req, res) {
    const query =   { $or: [{markerName: word}, {biomarkerType: word}, {diseaseType: word}, {associatedDrug: word}, {medium: word}] };
 
    const results = await collection.find(query, function(err, cursor) {
-     return cursor.batchSize(10).toArray();
+     return cursor.toArray();
    });
  
            console.log(results);
