@@ -110,7 +110,11 @@
             </script>
                <script type="text/javascript">
                     var table = $('#testid').DataTable( {
-  
+                    processing: true,
+                        'language':{ 
+                           "loadingRecords": "&nbsp;",
+                           "processing": "Loading..."
+                        },
                          autoWidth: false,
                         buttons: [ 'copy', 'excel', 'colvis' ]
                     } );
