@@ -48,7 +48,7 @@ async function onSearchData(event) {
   const word = input.value.trim();
   const results = document.querySelector('#database');
   const result = ""; 
-  if (word in results) {
+  for (word in results) {
    result = await fetch('/lookup/' + word);
   }
   const json = await result.json();
