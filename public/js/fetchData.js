@@ -7,10 +7,6 @@ async function onSearchData(event) {
   const word = input.value.trim();
   const results = document.querySelector('#database');
   const result = await fetch('/lookup/' + word);
-  var json = "";
-  var resultWord = "";
-  var associated = "":
-  for (word in results) {
     const json = await result.json();
     const resultWord = json.word;
     const associated = json.associated;
@@ -36,7 +32,6 @@ async function onSearchData(event) {
       console.log(count);
 
     }
-  }
 } 
 var table = $('#testid').DataTable();
 const searchForm = document.querySelector('#searchForm');
