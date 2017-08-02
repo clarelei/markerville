@@ -5,13 +5,8 @@ async function onSearchData(event) {
   
   const input = document.querySelector('#word-input');
   const word = input.value.trim();
-  const re = new RegExp(word, "gi");
-  const arr = new Array();
   const results = document.querySelector('#database');
-  if (results.include(re)) {
-   arr = re.exec(results);
-  }
-  const result = await fetch('/lookup/' + arr);
+  const result = await fetch('/lookup/' + word);
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
@@ -41,3 +36,16 @@ async function onSearchData(event) {
 var table = $('#testid').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
+
+
+
+
+
+
+//   const re = new RegExp(word, "gi");
+//   const arr = new Array();
+
+
+//   if (results.include(re)) {
+//    arr = re.exec(results);
+//   }
