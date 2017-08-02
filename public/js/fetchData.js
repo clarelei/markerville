@@ -45,11 +45,11 @@ async function onSearchData(event) {
   event.preventDefault();
   
   const input = document.querySelector('#word-input');
-  const word = input.value.trim();
+  const word = new RegExp(input.value.trim(), 'i');
   const results = document.querySelector('#database');
   const result = ""; 
-  for (word.ignoreCase() in results) {
-   result = await fetch('/lookup/' + word);
+  for (word in results) {
+   result += await fetch('/lookup/' + word);
   }
   const json = await result.json();
   const resultWord = json.word;
