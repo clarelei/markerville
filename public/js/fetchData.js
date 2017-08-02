@@ -4,12 +4,9 @@ async function onSearchData(event) {
   event.preventDefault();
   
   const input = document.querySelector('#word-input');
-  const word = input.value.trim();
+  const word = input.value;
   const results = document.querySelector('#database');
   const result = await fetch('/lookup/' + word);
-  if (results.search(word, "i") != -1) {
-   show results;
-  }
   const json = await result.json();
   const resultWord = json.word;
   const associated = json.associated;
