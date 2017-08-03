@@ -31,225 +31,203 @@
     </head>
 
       <body>
-          <div class = "navBar">
-              <div class = "button" id = "databaseButton" > Biomarker Search  </div>
-              <div class = "button" id = "resourcesButton"> Resources </div>
-              <div class = "button" id = "forumButton">  Forum </div>
-              <div class = "button" id = "aboutButton"> About  </div>
-          </div>
-
-          <div id =  "forum" class="inactive">
-
-
-          <div id = "forum-table-cont">
-            <section>
-            <input class="animate" type="radio" name="question" id="q1"/>
-            <label class="animate" for="q1">Q: What is Snorkel?</label>
-            <p class="response animate">A: blah blah blah</p>
-
-            <input class="animate" type="radio" name="question" id="q2"/>
-            <label class="animate" for="q2">Q: What is Core NLP?</label>
-            <p class="response animate">A: bajgl;fbkdl;fa</p>
-
-            <input class="animate" type="radio" name="question" id="q3"/>
-            <label class="animate" for="q3">Q: asdhfjksgjd;?</label>
-            <p class="response animate">A: sdfjhkas;dgh</p>
-
-            <input class="animate" type="radio" name="question" id="q4"/>
-            <label class="animate" for="q4">Q: Where can i get some?</label>
-            <p class="response animate">A: ajkgl;c,mvwio</p>
-          </section>
-            <div id = "message-post-cont">
-              <!-- onsubmit="return false" -->
-            <form id="forumForm">
-            <input type = "text" id = "message-post"  placeholder="Question here"onblur="this.placeholder='Question here'" onfocus="this.placeholder = ''"> </input>
-            <br><br><button type="button" class="faqButton" onclick="alert('Your question was submitted!')">Submit!</button>
-            </form>
-            </div>
+        <div class = "navBar">
+          <div class = "button" id = "databaseButton" > Biomarker Search  </div>
+          <div class = "button" id = "resourcesButton"> Resources </div>
+          <div class = "button" id = "forumButton">  Forum </div>
+          <div class = "button" id = "aboutButton"> About  </div>
         </div>
 
-   </div>
-<!--         <div id =  "aboutPage" class="inactive">
-            <p> Markerville is a web-hosted database that displays information about biomarkers.
-            Allows users to search and edit existing information, while adding new entries of their own.
-            We aim to create a community around biomarkers in the clinical research world and beyond. 
+        <div id =  "forum" class="inactive">
+          <div id = "forum-table-cont">
+            <section>
+              <input class="animate" type="radio" name="question" id="q1"/>
+              <label class="animate" for="q1">Q: What is Snorkel?</label>
+              <p class="response animate">A: blah blah blah</p>
 
-            We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab.
+              <input class="animate" type="radio" name="question" id="q2"/>
+              <label class="animate" for="q2">Q: What is Core NLP?</label>
+              <p class="response animate">A: bajgl;fbkdl;fa</p>
 
-            Developed by Mallick Lab at the Canary Center for Cancer Early Detection, Stanford University School of Medicine.
-            Built with Node.js, Express, and MySQL. Thanks for visiting! More coming soon. </p>
-            <div id = "aboutPic">
-            <img id = "gautam" src = "images/gautam.jpg"></img>
+              <input class="animate" type="radio" name="question" id="q3"/>
+              <label class="animate" for="q3">Q: asdhfjksgjd;?</label>
+              <p class="response animate">A: sdfjhkas;dgh</p>
+
+              <input class="animate" type="radio" name="question" id="q4"/>
+              <label class="animate" for="q4">Q: Where can i get some?</label>
+              <p class="response animate">A: ajkgl;c,mvwio</p>
+            </section>
+            
+          <div id = "message-post-cont">
+            <!-- onsubmit="return false" -->
+            <form id="forumForm">
+              <input type = "text" id = "message-post"  placeholder="Question here"onblur="this.placeholder='Question here'" onfocus="this.placeholder = ''"> </input>
+              <br><br><button type="button" class="faqButton" onclick="alert('Your question was submitted!')">Submit!</button>
+            </form>
           </div>
-          </div> -->
-          <div id =  "aboutPage" class="inactive">
-            <div class="module">
-              <header>
-                <h1 style="margin-left:100px;">
-                  <strong>ABOUT</strong><br>the most comprehensive database of disease-biomarker pairings
-                </h1>
-              </header>
-            </div>
+          </div>
+        </div>
 
-            <div class="listing" style="margin-top:50px;margin-left:100px;margin-right:100px;">
-              <article>Markerville is a web-hosted database that displays information about biomarkers and allows users to search and edit existing information, while adding new entries of their own. We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab. We aim to create a community around biomarkers in the clinical research world and beyond. Thanks for visiting! More coming soon.</article>
-            </div>
-            <h1 style="margin-left:100px;">Developed By:</h1>
-            <div class="main-container">
+        <div id =  "aboutPage" class="inactive">
+          <div class="module">
+            <header>
+              <h1 style="margin-left:100px;">
+                <strong>ABOUT</strong><br>the most comprehensive database of disease-biomarker pairings
+              </h1>
+            </header>
+          </div>
 
-              <div class="container cf">
-                <!-- Course 1 -->
-                <div class="animation-element bounce-up cf">
-                  <div class="subject development">
-                    <div class="category-color"></div>
+          <div class="listing" style="margin-top:50px;margin-left:100px;margin-right:100px;">
+            <article>Markerville is a web-hosted database that displays information about biomarkers and allows users to search and edit existing information, while adding new entries of their own. We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab. We aim to create a community around biomarkers in the clinical research world and beyond. Thanks for visiting! More coming soon.</article>
+          </div>
+          <h1 style="margin-left:100px;">Developed By:</h1>
+          <div class="main-container">
+            <div class="container cf">
+              <!-- Course 1 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
                     <div class="icon"><i class="fa fa-cogs"></i></div>
                     <h3 class="title"><img id="aboutPic" src="images/parag.jpg"></h3>
                     <div class="content" style="text-align: center;">Dr. Parag Mallick</div>
-                  </div>
                 </div>
-                <!-- Course 2 -->
-                <div class="animation-element bounce-up cf">
-                  <div class="subject design">
-                    <div class="category-color"></div>
+              </div>
+              <!-- Course 2 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject design">
+                  <div class="category-color"></div>
                     <div class="icon"><i class="fa fa-pencil"></i></div>
                     <h3 class="title"><img id="aboutPic" src="images/gautam.jpg"></h3>
                     <div class="content" style="text-align: center;">Gautam Machiraju</div>
-                  </div>
-                </div>
-                <!-- Course 3 -->
-                <div class="animation-element bounce-up">
-                  <div class="subject photography">
-                    <div class="category-color"></div>
-                    <div class="icon"><i class="fa fa-camera"></i></div>
-                    <h3 class="title"><img id="aboutPic" src="images/varun.png"></h3>
-                    <div class="content" style="text-align: center;">Varun Tandon</div>
-                  </div>
-                </div>
-                <!-- Course 4 -->
-                <div class="animation-element bounce-up cf">
-                  <div class="subject design">
-                    <div class="category-color"></div>
-                    <div class="icon"><i class="fa fa-pencil"></i></div>
-                    <h3 class="title"><img id="aboutPic" src="images/cameron.png"></h3>
-                    <div class="content" style="text-align: center;">Cameron Baab</div>
-                  </div>
-                </div>
-                <!-- Course 5 -->
-                <div class="animation-element bounce-up cf">
-                  <div class="subject development">
-                    <div class="category-color"></div>
-                    <div class="icon"><i class="fa fa-cogs"></i></div>
-                    <h3 class="title"><img id="aboutPic" src="images/clare.png"></h3>
-                    <div class="content" style="text-align: center;">Clare Lei</div>
-                  </div>
-                </div>
-                <!-- Course 6 -->
-                <div class="animation-element bounce-up cf">
-                  <div class="subject development">
-                    <div class="category-color"></div>
-                    <div class="icon"><i class="fa fa-cogs"></i></div>
-                    <h3 class="title"><img id="aboutPic" src="images/richa.png"></h3>
-                    <div class="content" style="text-align: center;">Richa Sehgal</div>
-                  </div>
                 </div>
               </div>
-              <script>
-                var $animation_elements = $('.animation-element');
-                var $window = $(window);
-
-                function check_if_in_view() {
-                  var window_height = $window.height();
-                  var window_top_position = $window.scrollTop();
-                  var window_bottom_position = (window_top_position + window_height);
-
-                  $.each($animation_elements, function() {
-                    var $element = $(this);
-                    var element_height = $element.outerHeight();
-                    var element_top_position = $element.offset().top;
-                    var element_bottom_position = (element_top_position + element_height);
-
-                    //check to see if this current container is within viewport
-                    if ((element_bottom_position >= window_top_position) &&
-                      (element_top_position <= window_bottom_position)) {
-                      $element.addClass('in-view');
-                    } else {
-                      $element.removeClass('in-view');
-                    }
-                  });
-                }
-
-                $window.on('scroll resize', check_if_in_view);
-                $window.trigger('scroll');
-              </script>
-
-          </div>          
-
-              <div id = "result" class="inactive">
-              <div id = "result-table-cont">
-
-               <table id ="testid" class="display" cellspacing="0" width="100%">  
-               <thead>
-                 <tr>
-                   <th> Biomarker Name
-                   <th> Biomarker Type
-                   <th> Disease 
-                   <th> Associated Drug
-                   <th> Medium
-                 </tr>
-               </thead>
-               <tbody>
-               </tbody> 
-             </table>
-      
-             <script type="text/javascript">
-            $(document).ready( function () {
-                              $('#testid').DataTable();
-            
-            } );
-            </script>
-               <script type="text/javascript">
-                    var table = $('#testid').DataTable( {
-                    processing: true,
-                        'language':{ 
-                           "loadingRecords": "&nbsp;",
-                           "processing": "Loading..."
-                        },
-                         autoWidth: false,
-                        buttons: [ 'copy', 'excel', 'colvis' ]
-                    } );
-
-                    table.buttons().container()
-                        .insertBefore( '#testid_filter' );
-                </script>
-        
-
-           </div>
+              <!-- Course 3 -->
+              <div class="animation-element bounce-up">
+                <div class="subject photography">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-camera"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/varun.png"></h3>
+                  <div class="content" style="text-align: center;">Varun Tandon</div>
+                </div>
+              </div>
+              <!-- Course 4 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject design">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-pencil"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/cameron.png"></h3>
+                  <div class="content" style="text-align: center;">Cameron Baab</div>
+                </div>
+              </div>
+              <!-- Course 5 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-cogs"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/clare.png"></h3>
+                  <div class="content" style="text-align: center;">Clare Lei</div>
+                </div>
+              </div>
+              <!-- Course 6 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-cogs"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/richa.png"></h3>
+                  <div class="content" style="text-align: center;">Richa Sehgal</div>
+                </div>
+              </div>
+            </div>
           </div>
+            
+          <script>
+            var $animation_elements = $('.animation-element');
+            var $window = $(window);
 
-          <div id = "database">
+            function check_if_in_view() {
+              var window_height = $window.height();
+              var window_top_position = $window.scrollTop();
+              var window_bottom_position = (window_top_position + window_height);
 
-              <p> Welcome to MarkerVille! <br>Search by biomarker, drug, or cancer type: </p>
-              <div>
-                <!-- onsubmit="return false" -->
+              $.each($animation_elements, function() {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
 
-              <form id="searchForm">
-                <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
-                <br><br><button class="browseButton">Browse Database</button>
-                </form>
-              </div>
+                //check to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) &&
+                  (element_top_position <= window_bottom_position)) {
+                  $element.addClass('in-view');
+                } else {
+                  $element.removeClass('in-view');
+                }
+              });
+            }
+
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+          </script>
+        </div>
+          
+        <div id = "result" class="inactive">
+          <div id = "result-table-cont">
+
+            <table id ="testid" class="display" cellspacing="0" width="100%">  
+              <thead>
+                <tr>
+                  <th> Biomarker Name
+                  <th> Biomarker Type
+                  <th> Disease 
+                  <th> Associated Drug
+                  <th> Medium
+                </tr>
+              </thead>
+              <tbody>
+              </tbody> 
+            </table>
+
+            <script type="text/javascript">
+              $(document).ready( function () {
+                $('#testid').DataTable();
+              } );
+            </script>
+                 
+            <script type="text/javascript">
+              var table = $('#testid').DataTable( {
+                processing: true,
+                'language':{ 
+                  "loadingRecords": "&nbsp;",
+                  "processing": "Loading..."
+                },
+                autoWidth: false,
+                buttons: [ 'copy', 'excel', 'colvis' ]
+              } );
+              table.buttons().container()
+              .insertBefore( '#testid_filter' );
+            </script>
+        
+          </div>
+        </div>
+
+        <div id = "database">
+          <p> Welcome to MarkerVille! <br>Search by biomarker, drug, or cancer type: </p>
+          <div>
+          <!-- onsubmit="return false" -->
+            <form id="searchForm">
+              <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+              <br><br><button class="browseButton">Browse Database</button>
+            </form>
+          </div>
         </div>
 
         <div id =  "resourcesPage" class="inactive">
-
             <p>Markerville is a web-hosted database that displays information about biomarkers.<br>We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab.<br>Developed by <a href="http://mallicklab.stanford.edu/">Mallick Lab</a> at the Canary Center for Cancer Early Detection, Stanford University School of Medicine.<br>Built with Node.js, Express, and MySQL.</p>
-
             <div id = "resourcesPic">
-            <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
-            <a href="https://canarycenter.stanford.edu/"><img id = "canary" src = "images/canary.png"></img></a>
-            <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
+              <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
+              <a href="https://canarycenter.stanford.edu/"><img id = "canary" src = "images/canary.png"></img></a>
+              <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
             </div>
-
-          </div>
         </div>
 
   </body>
