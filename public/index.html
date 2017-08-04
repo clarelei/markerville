@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MarkerVille</title>   
     <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/animations.css">
     <script src="js/jquery.js"> </script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/result.js" defer></script>
     <script src="js/about.js" defer></script>
     <script src="js/forum.js" defer></script>
-    <script src="js/resources.js" defer></script>
+    <!-- <script src="js/resources.js" defer></script> -->
     <script src="js/database.js" defer></script>
     <script src="js/app.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
+    <script src="js/animationscroll.js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.jqueryui.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
@@ -32,10 +37,13 @@
 
       <body>
         <div class = "navBar">
-          <div class = "button" id = "databaseButton" > Biomarker Search  </div>
-          <div class = "button" id = "resourcesButton"> Resources </div>
-          <div class = "button" id = "forumButton">  Forum </div>
-          <div class = "button" id = "aboutButton"> About  </div>
+          <div class = "logobutton" id = "logoButton"> 
+            <img src = "images/markerville_logo.png" style = "width:140px;height:50px;margin-top:10px;"></img> 
+          </div>
+          <div class = "button" id = "databaseButton" > SEARCH  </div>
+          <!-- <div class = "button" id = "resourcesButton"> RESOURCES </div> -->
+          <div class = "button" id = "forumButton">  FAQ </div>
+          <div class = "button" id = "aboutButton"> ABOUT  </div>
         </div>
 
         <div id =  "forum" class="inactive">
@@ -43,28 +51,28 @@
             <section>
               <input class="animate" type="radio" name="question" id="q1"/>
               <label class="animate" for="q1">Q: What is Snorkel?</label>
-              <p class="response animate">A: blah blah blah</p>
+              <p class="response animate">A: Snorkel is a machine learning tool to model and manage data.</p>
 
               <input class="animate" type="radio" name="question" id="q2"/>
               <label class="animate" for="q2">Q: What is Core NLP?</label>
-              <p class="response animate">A: bajgl;fbkdl;fa</p>
+              <p class="response animate">A: Stanford CoreNLP is a set of language technology tools which gives the base forms of words and their parts of speech. This can be used to apply linguistic analyis tools to pieces of text.</p>
 
               <input class="animate" type="radio" name="question" id="q3"/>
-              <label class="animate" for="q3">Q: asdhfjksgjd;?</label>
-              <p class="response animate">A: sdfjhkas;dgh</p>
+              <label class="animate" for="q3">Q: Where does our data come from?</label>
+              <p class="response animate">A: This data was collected through programmatic analysis of over 3.9 million research articles (the entire corpus of PubMed Central). New data will be periodically updated into the database by the Mallick Lab.</p>
 
               <input class="animate" type="radio" name="question" id="q4"/>
-              <label class="animate" for="q4">Q: Where can i get some?</label>
-              <p class="response animate">A: ajkgl;c,mvwio</p>
+              <label class="animate" for="q4">Q: What can I use MarkerVille for?</label>
+              <p class="response animate">A: Markerville can be used to find information about biomarkers quickly and easily. You can look up a biomarker in the search bar, and information about medium, type, and associated conditions will be displayed in a table. Instead of having to read through many research papers for this information, you can just use Markerville.</p>
             </section>
-            
+          </div>
+
           <div id = "message-post-cont">
             <!-- onsubmit="return false" -->
             <form id="forumForm">
               <input type = "text" id = "message-post"  placeholder="Question here"onblur="this.placeholder='Question here'" onfocus="this.placeholder = ''"> </input>
-              <br><br><button type="button" class="faqButton" onclick="alert('Your question was submitted!')">Submit!</button>
+              <br><br><button type="button" class="faqButton" onclick="alert('Your question was submitted!')">Submit!</button><br><br>
             </form>
-          </div>
           </div>
         </div>
 
@@ -77,10 +85,15 @@
             </header>
           </div>
 
-          <div class="listing" style="margin-top:50px;margin-left:100px;margin-right:100px;">
-            <article>Markerville is a web-hosted database that displays information about biomarkers and allows users to search and edit existing information, while adding new entries of their own. We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab. We aim to create a community around biomarkers in the clinical research world and beyond. Thanks for visiting! More coming soon.</article>
+          <div class="listing">
+            <article style="font-size:120%;">Markerville is a web-hosted database that displays information about biomarkers and allows users to search and edit existing information, while adding new entries of their own. We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab. Developed by <a href="http://mallicklab.stanford.edu/">Mallick Lab</a> at the Canary Center for Cancer Early Detection, Stanford University School of Medicine. Built with Node.js and MongoDB. Thanks for visiting! More coming soon.<br></article>
           </div>
-          <h1 style="margin-left:100px;">Developed By:</h1>
+          <div id = "resourcesPic">
+            <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
+            <a href="https://canarycenter.stanford.edu/"><img id = "canarylink" src = "images/canary.png"></img></a>
+            <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
+          </div>
+          <h1 style="font-size:200%; margin: 0% 8% 1%;"><strong>Developed By:</strong></h1>
           <div class="main-container">
             <div class="container cf">
               <!-- Course 1 -->
@@ -211,24 +224,46 @@
         </div>
 
         <div id = "database">
-          <p> Welcome to MarkerVille! <br>Search by biomarker, drug, or cancer type: </p>
+          <br><br><br><br><br><br>
+          <p style="font-size:100%;"> DEVELOPED BY THE STANFORD CANARY CENTER </p>
+          <br>
+          <p style="font-size:400%;"> M A R K E R V I L L E </p>
           <div>
-          <!-- onsubmit="return false" -->
+            <!-- onsubmit="return false" -->
             <form id="searchForm">
-              <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+              <input type= "text" id="word-input" placeholder="ENTER A BIOMARKER"onblur="this.placeholder='ENTER A BIOMARKER'" onfocus="this.placeholder = ''"/>
               <br><br><button class="browseButton">Browse Database</button>
             </form>
           </div>
         </div>
 
-        <div id =  "resourcesPage" class="inactive">
+<!--         <div id =  "resourcesPage" class="inactive">
             <p>Markerville is a web-hosted database that displays information about biomarkers.<br>We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab.<br>Developed by <a href="http://mallicklab.stanford.edu/">Mallick Lab</a> at the Canary Center for Cancer Early Detection, Stanford University School of Medicine.<br>Built with Node.js, Express, and MySQL.</p>
             <div id = "resourcesPic">
               <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
-              <a href="https://canarycenter.stanford.edu/"><img id = "canary" src = "images/canary.png"></img></a>
+              <a href="https://canarycenter.stanford.edu/"><img id = "canarylink" src = "images/canary.png"></img></a>
               <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
             </div>
+        </div> -->
+
+        <div class="footer">
+          <br>
+          <div id="canary" class="slideUp">
+            <a href="https://canarycenter.stanford.edu/"><img src="images/logo-footer.png" class="canary">
+            <p><a href="http://mallicklab.stanford.edu/">MALLICK  LAB</a> </p>
+            <p><a href="https://canarycenter.stanford.edu/">Stanford Canary Center for Cancer Early Detection </a></p>
         </div>
+        <script>
+          $(window).scroll(function() {
+            $('#canary').each(function(){
+              var imagePos = $(this).offset().top;
+              var topOfWindow = $(window).scrollTop();
+              if (imagePos < topOfWindow+400) {
+                $(this).addClass("slideUp");
+              }
+            });
+          });
+        </script>
 
   </body>
 </html>
